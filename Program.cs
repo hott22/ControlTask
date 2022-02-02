@@ -2,6 +2,7 @@
 //формирует массив из строк, длина которых меньше или равна 3 символам. 
 //Первоначальный массив можно ввести с клавиатуры, лиюо задать на старте выполнения алгоритма.
 
+Console.WriteLine("Введите строки: ");
 void CreateArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -35,17 +36,17 @@ string[] AlteredArray(string[] array, int argument)
     return secondArray;
 }
 
-// void PrintArray(string[] array)
-// {
-//     Console.Write("[");
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         Console.Write($"{array[i]}, ");
-//     }
-//     Console.Write("]");
-// }
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.Write("]");
+}
 
-string[] array = new string[10];
+string[] array = new string[5];
 CreateArray(array);
 string[] secondArray = AlteredArray(array, 3);
-//PrintArray(secondArray);
+PrintArray(secondArray);
